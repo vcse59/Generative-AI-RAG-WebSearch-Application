@@ -18,6 +18,7 @@ services:
     restart: always
     environment:
       - OLLAMA_API_URL=http://ollama:11434  # Ollama API URL
+      - OLLAMA_LLM_MODEL_NAME=gemma3:latest  # Specify the model to use
     ports:
       - "8000:8000"  # Server port
     networks:
@@ -26,9 +27,6 @@ services:
   front-end-service:
     build: ./frontend-chat  # Path to the Front end Dockerfile
     container_name: frontend-service
-    restart: always
-    depends_on:
-      - back-end-service  # Ensure backend service starts before frontend
     ports:
       - "5000:5000"  # Frontend port
     networks:

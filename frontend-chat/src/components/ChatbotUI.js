@@ -22,7 +22,7 @@ const ChatbotUI = () => {
             const response = await fetch("http://127.0.0.1:8000/generate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ model_name: "phi", prompt: prompt })
+                body: JSON.stringify({ prompt: prompt })
             });
 
             // Check if the response is OK
@@ -32,10 +32,6 @@ const ChatbotUI = () => {
 
             const data = await response.json();  // Correctly parse JSON
             const combinedResponse = data.response || "Please try again"; // Ensure a fallback if empty
-
-            if (combinedResponse.length == 0) {
-                return getFalconResponse(prompt);
-            }
 
             // Update the message UI progressively with each chunk
             setMessages((prevMessages) => [

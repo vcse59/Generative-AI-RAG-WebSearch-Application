@@ -21,13 +21,9 @@ This project is a real-time chat application built with React and TypeScript. It
 
 ### Installation
 
-1. Clone the repository:
+1. Install dependencies:
     ```sh
-    git clone https://github.com/vcse59/frontend-chat.git
     cd frontend-chat
-    ```
-2. Install dependencies:
-    ```sh
     npm install
     ```
 

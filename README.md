@@ -48,8 +48,8 @@ This project uses the following services, each with its own README and specific 
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/vcse59/GenerativeAI.git
-    cd GenerativeAI
+    git clone https://github.com/vcse59/Generative-AI-RAG-WebSearch-Application.git
+    cd Generative-AI-RAG-WebSearch-Application
     ```
 
 2. **Build Docker Images**
